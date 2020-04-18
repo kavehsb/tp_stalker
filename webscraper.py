@@ -1,12 +1,10 @@
 from bs4 import BeautifulSoup
-from selenium import webdriver
+import requests
 import json
 
-driver = webdriver.Firefox()
-driver.get("https://www.walgreens.com/q/toilet+paper")
-
-html = driver.page_source
-content = BeautifulSoup(html, "html.parser")
+url = "https://www.walgreens.com/q/toilet+paper"
+response = requests.get(url, timeout=5)
+content = BeautifulSoup(response.content, "html.parser")
 
 data = []
 for tp_data in content.find_all("div", attrs={"class": "wag-product-card-details wag-product-card-width_b"}):
@@ -18,4 +16,3 @@ for tp_data in content.find_all("div", attrs={"class": "wag-product-card-details
 
 with open ("toilet_paper_data.json", "w") as outfile:
     json.dump(data, outfile)
-driver.quit()
