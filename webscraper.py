@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import json
 
-url = "https://www.walgreens.com/q/toilet+paper"
+url = "https://www.walgreens.com/q/toilet+paper?N=3398"
 response = requests.get(url, timeout=5)
 content = BeautifulSoup(response.content, "html.parser")
 
