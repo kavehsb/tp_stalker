@@ -1,6 +1,8 @@
-[
-    {"price": "$1199", "availability": "Out of stock online"}, 
-    {"price": "$449", "availability": "Out of stock online"}, 
-    {"price": "", "availability": "Not sold online"}, 
-    {"price": "$500", "availability": "Not sold in stores"}, 
-    {"price": "$1149", "availability": "Not sold in stores"}]
+[{"price": "$699", "availability": "Out of stock online"}, 
+    {"price": "$699", "availability": "Out of stock online"}, 
+    {"price": "$1399", "availability": "Out of stock online"}, 
+    {"price": "$999", "availability": "Out of stock online"}, 
+    {"price": "$999", "availability": "Out of stock online"}, 
+    {"price": "Price available in store", "availability": "Not sold online"}, 
+    {"price": "Price available in store", "availability": "Not sold online"}, 
+    {"price": "Price available in store", "availability": "Not sold online"}]
