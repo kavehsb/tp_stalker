@@ -1,4 +1,5 @@
 import json
+import re
 import pandas as pd
 
 # This code assumes the BlobServiceClient is already created
