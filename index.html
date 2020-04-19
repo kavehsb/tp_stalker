@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TP Stalker</title>
+    <link rel="stylesheet" href="format.css"/ type="text/css">
+    <script src = "app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <noscript>You need to enable JavaScript to use the full functionality of the site.</noscript>
+</head>
+<body>
+<h1>TP Stalker</h1>
+<h1>We help you track the stores 24 hours every day and text you as soon as the stores import more toilet paper.</h1>   
+<section>
+<h2>Do you need toilet paper? Stores are out of stock? </h2>
+<h2>Don't worry! TP Stalker will satisfy your needs! </h2>
+
+<h3>Subscribe here to get notification delivered to your phone!</h3>
+<h4>
+    <ul>
+        <li>Walgreens: address</li>
+        <li>Safeway: address</li>
+        <li>Fredmyer: address</li>
+        <li>Costco: address</li>
+    </ul>
+</h4>
+<label for="phone-input">Enter your 10 digit phone number in the field below with no dashes or spaces:</label><br/>
+<input type="tel" id="phone-input" placeholder="Enter phone number" class="form-control" style="width:30%;"/><br/><br/>
+<label for="topic-select">Select which store you would like to subscribe to:</label>
+    <form id="topic-select" method="post">
+        <input type="radio" id="good" name="topic" value="main_topic">
+        <label for="good">Walgreens</label><br>
+        <input type="radio" id="bad" name="topic" value="bad_topic">
+        <label for="bad">Safeway</label><br>
+        <input type="radio" id="crob" name="topic" value="crob_topic">
+        <label for="crob">Fredmyer</label><br>
+        <input type="radio" id="hydrate" name="topic" value="hydrate_topic">
+        <label for="hydrate">Costco</label><br>
+        <button type="button" onClick="submitToAPI(event)" class="btn btn-lg" style="margin-top:20px;">Subscribe</button>
+    </form>
+    </section>
+</body>
+</html>
