@@ -12,6 +12,7 @@ for tp_data in content.find_all("div", attrs={"class": "wag-product-card-details
     for span in unwanted:
         span.extract()
 
+    item = tp_data.find("a", attrs={"name": "product-title"}).text.strip()
     price = tp_data.find("span", attrs={"class": "product__price"}).text.strip()
     availability = tp_data.find("p", attrs={"class": "wag-channal-availabilitytxt"}).text.strip()
 
@@ -19,6 +20,7 @@ for tp_data in content.find_all("div", attrs={"class": "wag-product-card-details
         price = "Price available in store"
 
     tp_object = {
+        "item": item,
         "price": price,
         "availability": availability,
     }
